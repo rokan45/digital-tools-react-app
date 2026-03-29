@@ -5,11 +5,6 @@ import { RxCross2 } from 'react-icons/rx';
 
 const navLinks = [
     {
-        // id: 1,
-        // name: "Home",
-        // path: "/",
-    },
-    {
         id: 2,
         name: "Product",
         path: "/Product",

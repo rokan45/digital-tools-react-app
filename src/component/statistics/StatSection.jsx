@@ -2,7 +2,7 @@ import React from 'react';
 
 const StatSection = () => {
     return (
-        <div className="stats bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white flex items-center justify-center p-10">
+        <div className="stats mx-5 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white flex items-center justify-center p-10">
             <div className="stat place-items-center p-1">
                 <div className="stat-value">50K+</div>
                 <div className="stat-desc text-white">Active Users</div>
