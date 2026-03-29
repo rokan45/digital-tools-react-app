@@ -5,6 +5,7 @@ import Navbar from './component/navbar/Navbar'
 import StatSection from './component/statistics/StatSection'
 import ToolSection from './component/tools/ToolSection'
 import Empty from './component/cart/Empty'
+import Cart from './component/cart/Cart'
 
 
 const fetchCardData=async() =>{
@@ -31,7 +32,9 @@ function App() {
        <ToolSection cardPromise={cardPromise}></ToolSection>
      </Suspense>
 
-     <Empty></Empty>
+     <Cart></Cart>
+     {/* <Empty></Empty> */}
+
     </main>
     </>
   )
