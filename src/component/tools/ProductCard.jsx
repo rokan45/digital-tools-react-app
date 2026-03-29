@@ -6,7 +6,7 @@ const ProductCard = ({ toolData }) => {
     const { badge, badgeColor, icon, title, description, price, priceType, features } = toolData
 
     return (
-        <div className="card w-96 bg-base-100 shadow-sm relative">
+        <div className="card bg-base-100 shadow-sm relative">
             <div className="card-body">
                 <div>
                     <span className="badge p-2  badge-xs badge-warning absolute top-1 right-1 text-white" style={{ backgroundColor: [badgeColor] }}>{badge}</span>

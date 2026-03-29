@@ -7,6 +7,7 @@ import ToolSection from './component/tools/ToolSection'
 import Empty from './component/cart/Empty'
 import Cart from './component/cart/Cart'
 import InstructionSection from './component/instruction/InstructionSection'
+import PricingSection from './component/pricing/PricingSection'
 
 
 const fetchCardData=async() =>{
@@ -36,6 +37,7 @@ function App() {
      {/* <Cart></Cart> */}
      {/* <Empty></Empty> */}
      <InstructionSection></InstructionSection>
+     <PricingSection></PricingSection>
 
     </main>
     </>
