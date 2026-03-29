@@ -4,6 +4,7 @@ import Banner from './component/banner/Banner'
 import Navbar from './component/navbar/Navbar'
 import StatSection from './component/statistics/StatSection'
 import ToolSection from './component/tools/ToolSection'
+import Empty from './component/cart/Empty'
 
 
 const fetchCardData=async() =>{
@@ -29,6 +30,8 @@ function App() {
      <Suspense fallback={<span className="loading loading-bars loading-xl flex mx-auto justify-center items-center"></span>}>
        <ToolSection cardPromise={cardPromise}></ToolSection>
      </Suspense>
+
+     <Empty></Empty>
     </main>
     </>
   )
