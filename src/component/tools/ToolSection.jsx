@@ -1,11 +1,15 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import ProductCard from './ProductCard';
+import Cart from '../cart/Cart';
 
-const ToolSection = ({ cardPromise }) => {
+const ToolSection = ({ cardPromise,addProduct,setAddProduct }) => {
     // console.log(cardPromise);
 
     const toolsData = use(cardPromise);
-    console.log(toolsData)
+    // console.log(toolsData)
+
+    // Product and cart button event handle
+    const [select, setSelect] = useState("Product")
 
     return (
         <div className='mx-auto mt-10 px-5'>
@@ -15,15 +19,23 @@ const ToolSection = ({ cardPromise }) => {
             </div>
 
             <div className='flex justify-center items-center mt-5'>
-                <button className='btn rounded-4xl rounded-r-none bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white'>Products</button>
-                <button className='btn rounded-4xl rounded-l-none'>Cart (2)</button>
+                <button onClick={() => setSelect("Product")} className={`btn rounded-4xl rounded-r-none ${select === "Product" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "btn"}`}>Products</button>
+                <button onClick={() => setSelect("Cart")} className={`btn rounded-4xl rounded-l-none ${select === "Product" ? "btn" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}>Cart ({addProduct.length})</button>
             </div>
+            {
+                select === "Product" ?
+                    <div className='mx-auto p-5 mt-10 grid grid-cols-3 gap-2.5'>
+                        {
+                            toolsData.map((toolData, index) => <ProductCard key={index} toolData={toolData} setAddProduct={setAddProduct} addProduct={addProduct} ></ProductCard>)
+                        }
+                    </div>
+                    :
+                    <div>
+                        <Cart addProduct={addProduct} setAddProduct={setAddProduct} ></Cart>
+                    </div>
+            }
 
-            <div className='mx-auto p-5 mt-10 grid grid-cols-3 gap-2.5'>
-               {
-                toolsData.map((toolData,index)=> <ProductCard key={index} toolData={toolData} ></ProductCard>)
-               }
-            </div>
+
         </div>
 
     );

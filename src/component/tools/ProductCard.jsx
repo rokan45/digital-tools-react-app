@@ -1,9 +1,19 @@
+import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
-const ProductCard = ({ toolData }) => {
+const ProductCard = ({ toolData, addProduct, setAddProduct }) => {
     // console.log(cardPromise)
     // console.log(toolData);
     const { badge, badgeColor, icon, title, description, price, priceType, features } = toolData
+
+    // Product card button event handle
+    const [productBtn,setProductBtn]=useState(false);
+
+    const handleProductBTn=(toolData)=>{
+
+        setAddProduct([...addProduct,toolData])
+        setProductBtn(true);
+    }
 
     return (
         <div className="card bg-base-100 shadow-sm relative">
@@ -28,7 +38,7 @@ const ProductCard = ({ toolData }) => {
                     ))}
                 </ul>
                 <div className="mt-6">
-                    <button className="btn w-full rounded-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white ">Buy Now</button>
+                    <button onClick={()=>handleProductBTn(toolData)} className={`btn w-full rounded-4xl ${productBtn===true?"bg-green-400":"bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"} `}>{productBtn===true?<span className="flex justify-center items-center gap-1.5"><FaCheck/> Added to cart!</span>:"Buy now"}</button>
                 </div>
             </div>
         </div>

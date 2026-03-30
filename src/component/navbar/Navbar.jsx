@@ -31,7 +31,9 @@ const navLinks = [
     },
 ];
 
-const Navbar = () => {
+const Navbar = ({ addProduct}) => {
+    // console.log(addProduct)
+
 
     const [open, setOpen] = useState(false);
 
@@ -63,8 +65,11 @@ const Navbar = () => {
 
                 {/* nav right container */}
                 <div className='flex items-center justify-center gap-4'>
-                    <div>
-                        <IoCartOutline />
+                    <div className='relative'>
+                        <span className='absolute -top-3 -right-2 text-xs text-white bg-red-500 rounded-full w-5 h-5 flex items-center justify-center'>
+                            {addProduct.length}
+                        </span>
+                        <IoCartOutline className='text-2xl' />
                     </div>
                     <span className='font-semibold text-sm'>Login</span>
                     <button className='btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-4xl '>

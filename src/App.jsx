@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './component/banner/Banner'
 import Navbar from './component/navbar/Navbar'
@@ -29,17 +29,19 @@ function App() {
 
   const pricingPromise=fetchPricingData();
 
+  const [addProduct,setAddProduct]=useState([]);
+
   return (
     <>
     <header>
-      <Navbar></Navbar>
+      <Navbar addProduct={addProduct} setAddProduct={setAddProduct} ></Navbar>
       <Banner></Banner>
     </header>
 
     <main>
       <StatSection></StatSection>
      <Suspense fallback={<span className="loading loading-bars loading-xl flex mx-auto justify-center items-center"></span>}>
-       <ToolSection cardPromise={cardPromise}></ToolSection>
+       <ToolSection cardPromise={cardPromise} addProduct={addProduct} setAddProduct={setAddProduct}></ToolSection>
      </Suspense>
 
      {/* <Cart></Cart> */}

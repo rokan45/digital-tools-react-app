@@ -16,7 +16,7 @@ const PricingSection = ({ pricingPromise }) => {
             <div className='mx-auto py-8 px-13 mt-10 grid grid-cols-3 gap-7'>
                 {
                     PricingData.map((priceData, index) => {
-                        const { badge, plan, description, price, priceType, features, buttonText, highlighted } = priceData
+                        const { plan, description, price, priceType, features, buttonText, highlighted } = priceData
 
                         return (
                             <div key={index} className={`card bg-base-100 shadow-lg p-4 ${highlighted===true?"bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white scale-110":"bg-base-100"}`}>

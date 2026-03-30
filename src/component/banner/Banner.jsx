@@ -5,11 +5,11 @@ import ButtonImg from './../../assets/Play.png'
 const Banner = () => {
     return (
         <div className="hero min-h-screen p-10">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className='border'>
+            <div className="hero-content flex-col lg:flex-row-reverse px-5">
+                <div className=''>
                     <img src={BannerImg} alt="Banner Image" />
                 </div>
-                <div className='border p-2.5'>
+                <div className='p-2.5'>
                     <button className='flex items-center justify-center gap-1 p-2 bg-[#E1E7FF] rounded-4xl text-purple-500 text-sm font-medium'><img src={CircleImg} alt="circle icon" /> New: AI-Powered Tools Available</button>
 
                     <h1 className='text-5xl font-extrabold leading-15 text-balance'>Supercharge Your Digital Workflow</h1>
