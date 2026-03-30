@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="bg-base-200 px-10 py-14">
             {/* Top Section */}
-            <div className="flex items-start justify-between gap-10">
+            <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
 
                 {/* Brand */}
                 <div className="max-w-xs">

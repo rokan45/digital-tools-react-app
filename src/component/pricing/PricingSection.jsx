@@ -13,7 +13,7 @@ const PricingSection = ({ pricingPromise }) => {
                     <p className='text-sm text-[#627382] text-wrap mt-5'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
                 </div>
             </div>
-            <div className='mx-auto py-8 px-13 mt-10 grid grid-cols-3 gap-7'>
+            <div className='mx-auto py-8 px-13 mt-10 grid grid-cols-1 gap-10 lg:grid-cols-3'>
                 {
                     PricingData.map((priceData, index) => {
                         const { badge, plan, description, price, priceType, features, buttonText, highlighted } = priceData

@@ -12,7 +12,7 @@ const InstructionSection = () => {
                 <p className='text-sm text-[#627382] text-wrap mt-5'>Start using premium digital tools in minutes, not hours.</p>
             </div>
             {/* instruction Card */}
-            <div className='mt-5 grid grid-cols-1 gap-4 py-10 px-15 md:grid-cols-3'>
+            <div className='mt-5 grid grid-cols-1 gap-4 py-10 px-15 lg:grid-cols-3'>
                 <div className='flex flex-col items-center p-5 relative text-center shadow-lg rounded-2xl'>
                     <span className='bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-4xl p-1 absolute top-3 right-3'>01</span>
                     <img src={UserImg} alt="" />
