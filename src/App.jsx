@@ -8,6 +8,8 @@ import Empty from './component/cart/Empty'
 import Cart from './component/cart/Cart'
 import InstructionSection from './component/instruction/InstructionSection'
 import PricingSection from './component/pricing/PricingSection'
+import Footer from './component/footer/Footer'
+import Freetrail from './component/footer/Freetrail'
 
 
 const fetchCardData=async() =>{
@@ -40,6 +42,11 @@ function App() {
      <PricingSection></PricingSection>
 
     </main>
+
+    <footer>
+      <Freetrail></Freetrail>
+      <Footer></Footer>
+    </footer>
     </>
   )
 }
