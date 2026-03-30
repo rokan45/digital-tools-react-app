@@ -13,15 +13,21 @@ import Freetrail from './component/footer/Freetrail'
 
 
 const fetchCardData=async() =>{
-
   const res=await fetch('/public/cardData.json')
   return res.json();
 }
 
+// Pricing Data
+const fetchPricingData=async()=>{
+  const res=await fetch('/public/pricingData.json')
+  return res.json();
+}
 
 function App() {
   
   const cardPromise=fetchCardData();
+
+  const pricingPromise=fetchPricingData();
 
   return (
     <>
@@ -39,7 +45,9 @@ function App() {
      {/* <Cart></Cart> */}
      {/* <Empty></Empty> */}
      <InstructionSection></InstructionSection>
-     <PricingSection></PricingSection>
+     <Suspense fallback={<span className="loading loading-bars loading-xl flex mx-auto justify-center items-center"></span>}>
+      <PricingSection pricingPromise={pricingPromise}></PricingSection>
+     </Suspense>
 
     </main>
 

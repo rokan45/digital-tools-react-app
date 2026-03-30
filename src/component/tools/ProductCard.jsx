@@ -2,7 +2,7 @@ import { FaCheck } from "react-icons/fa";
 
 const ProductCard = ({ toolData }) => {
     // console.log(cardPromise)
-    console.log(toolData);
+    // console.log(toolData);
     const { badge, badgeColor, icon, title, description, price, priceType, features } = toolData
 
     return (
