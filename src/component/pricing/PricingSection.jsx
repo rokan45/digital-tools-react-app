@@ -16,11 +16,14 @@ const PricingSection = ({ pricingPromise }) => {
             <div className='mx-auto py-8 px-13 mt-10 grid grid-cols-3 gap-7'>
                 {
                     PricingData.map((priceData, index) => {
-                        const { plan, description, price, priceType, features, buttonText, highlighted } = priceData
+                        const { badge, plan, description, price, priceType, features, buttonText, highlighted } = priceData
 
                         return (
-                            <div key={index} className={`card bg-base-100 shadow-lg p-4 ${highlighted===true?"bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white scale-110":"bg-base-100"}`}>
-                                <div className="card-body">
+                            <div key={index} className={`card bg-base-100 shadow-lg p-4 ${highlighted === true ? "bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white scale-110" : "bg-base-100"}`}>
+                                <div className="card-body relative">
+                                    {
+                                        badge && <div className='bg-amber-100 text-amber-600 rounded-4xl px-3 py-1 absolute -top-7 left-1/2 -translate-x-1/2'>{badge}</div>
+                                    }
                                     <div className="mt-2">
                                         <h2 className="text-2xl font-bold">{plan}</h2>
                                         <p className=" mt-2">{description}</p>
@@ -30,7 +33,7 @@ const PricingSection = ({ pricingPromise }) => {
                                     <ul className="mt-6 flex flex-col gap-2 text-xs">
                                         {features.map((feature, index) => (
                                             <li key={index} className="flex items-center gap-2">
-                                                <span className="text-purple-600"><FaCheck className="text-green-500"/></span>
+                                                <span className="text-purple-600"><FaCheck className="text-green-500" /></span>
                                                 {feature}
                                             </li>
                                         ))}

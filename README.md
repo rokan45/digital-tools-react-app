@@ -1,16 +1,78 @@
-# React + Vite
+# 🛒 DigiTools — Digital Tools Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive digital tools marketplace built with React. Browse, select, and manage premium digital products with a smooth cart experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tech Stack
 
-## React Compiler
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** — Component-based UI
+- **JavaScript** — Fast development build tool
+- **Vite** — Fast development build tool
+- **Tailwind CSS** — Utility-first styling
+- **DaisyUI** — Tailwind component library
+- **React Toastify** — Toast notifications
+- **React Icon** — Icon library
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+### 🛒 Smart Cart System
+Add products to your cart, view the live item count in the navbar, and remove individual items or clear the entire cart with "Proceed to Checkout" — all with real-time total price calculation.
+
+### 🔔 Toast Notifications
+Every cart action — adding a product, removing an item, or checking out — triggers a clean toast notification powered by React Toastify for a polished user experience.
+
+### 📱 Fully Responsive Design
+Optimized layout across all screen sizes. The product grid, cart section, pricing cards, and footer all adapt seamlessly from mobile to desktop.
+
+---
+
+## 📦 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/digital-tools-react-app.git
+
+# Navigate to the project
+cd digital-tools-react-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/          # Images and icons
+├── components/
+│   ├── banner/
+│   ├── cart/
+│   ├── footer/
+│   ├── instruction/
+│   ├── navbar/
+│   ├── pricing/
+│   ├── products/
+│   ├── statistics/
+│   └── tools/
+|          # JSON product data
+└── App.jsx
+```
+
+---
+
+## 🌐 Live Demo
+
+[View Live →](https://your-username.github.io/digital-tools-react-app)
