@@ -13,13 +13,13 @@ import Freetrail from './component/footer/Freetrail'
 
 
 const fetchCardData=async() =>{
-  const res=await fetch('/public/cardData.json')
+  const res=await fetch('/cardData.json')
   return res.json();
 }
 
 // Pricing Data
 const fetchPricingData=async()=>{
-  const res=await fetch('/public/pricingData.json')
+  const res=await fetch('/pricingData.json')
   return res.json();
 }
 

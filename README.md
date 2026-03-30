@@ -75,4 +75,4 @@ src/
 
 ## 🌐 Live Demo
 
-[View Live →](https://your-username.github.io/digital-tools-react-app)
+[View Live →](https://digitool-platform-react-app.netlify.app/)
