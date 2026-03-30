@@ -24,7 +24,7 @@ const ToolSection = ({ cardPromise,addProduct,setAddProduct }) => {
             </div>
             {
                 select === "Product" ?
-                    <div className='mx-auto p-5 mt-10 grid grid-cols-3 gap-2.5'>
+                    <div className='mx-auto p-5 mt-10 grid grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-3'>
                         {
                             toolsData.map((toolData, index) => <ProductCard key={index} toolData={toolData} setAddProduct={setAddProduct} addProduct={addProduct} ></ProductCard>)
                         }

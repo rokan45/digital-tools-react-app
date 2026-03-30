@@ -44,8 +44,6 @@ function App() {
        <ToolSection cardPromise={cardPromise} addProduct={addProduct} setAddProduct={setAddProduct}></ToolSection>
      </Suspense>
 
-     {/* <Cart></Cart> */}
-     {/* <Empty></Empty> */}
      <InstructionSection></InstructionSection>
      <Suspense fallback={<span className="loading loading-bars loading-xl flex mx-auto justify-center items-center"></span>}>
       <PricingSection pricingPromise={pricingPromise}></PricingSection>
